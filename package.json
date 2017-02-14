@@ -1,0 +1,26 @@
+{
+  "name": "cursoangular2",
+  "version": "1.0.0",
+  "description": "Curso Angular 2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Arnau Garcia",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/common": "^2.4.2",
+    "@angular/compiler": "^2.4.2",
+    "@angular/core": "^2.4.2",
+    "@angular/http": "^2.4.2",
+    "@angular/platform-browser": "^2.4.2",
+    "@angular/platform-browser-dynamic": "^2.4.2",
+    "@angular/router": "^3.4.2",
+    "@angular/router-deprecated": "^2.0.0-rc.2",
+    "bootstrap": "^3.3.7",
+    "es5-shim": "^4.5.9",
+    "reflect-metadata": "^0.1.9",
+    "rxjs": "^5.0.3",
+    "zone.js": "^0.7.4"
+  }
+}
