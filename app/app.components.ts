@@ -6,11 +6,13 @@ import {Pelicula} from "./model/pelicula";
 
 @Component({
     selector: "mi-app",
-    templateUrl: "app/view/peliculas.html"
+    templateUrl: "app/view/peliculas.html",
+    styleUrls: ["./assets/css/styles.css"]
 })
 
 export class AppComponent{
 
+    public titulo:string = "Peliculas con Angular 2";
     public pelicula:Pelicula;
 
     constructor(){
