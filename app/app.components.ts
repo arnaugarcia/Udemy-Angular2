@@ -10,7 +10,18 @@ import {Component} from "angular2/core";
 
 export class AppComponent{
     public titulo:string = "Películas con Angular 2";
-    public pelicula:string = "Batman vs Superman";
-    public director:string = "Zack Snider";
-    public anio:number = 2016;
+    public pelicula:string;
+    public director:string;
+    public anio:number;
+
+    constructor(){
+        this.pelicula = "Batman v Superman";
+        this.director = "Zack Snider";
+        this.anio = 2016;
+        this.holaMundo();
+    }
+
+    holaMundo(){
+        alert("Películas: " + this.pelicula + " - " + this.director + " - " + this.anio );
+    }
 }
