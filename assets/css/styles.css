@@ -2,3 +2,6 @@ h1{
     font-family: Arial, Helvetica;
     color: #444;;
 }
+.showingData{
+    display: none;
+}

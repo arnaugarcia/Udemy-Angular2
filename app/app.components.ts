@@ -14,13 +14,19 @@ export class AppComponent{
 
     public titulo:string = "Peliculas con Angular 2";
     public pelicula:Pelicula;
+    public mostrarDatos:boolean;
 
     constructor(){
+        this.mostrarDatos = false;
         this.pelicula = new Pelicula(1,"Batman v Superman","Zack Snider",2016);
         this.debug();
     }
 
     debug(){
         console.log(this.pelicula);
+    }
+
+    onShowHide(value:boolean){
+        this.mostrarDatos=value;
     }
 }
