@@ -3,10 +3,12 @@
  */
 import {Component} from "angular2/core";
 import {Pelicula} from "../model/pelicula";
+import {PeliculasService} from "../services/peliculas.service";
 
 @Component({
     selector: "peliculas-list",
-    templateUrl: "app/view/peliculas-list.html"
+    templateUrl: "app/view/peliculas-list.html",
+    providers: [PeliculasService]
 })
 
 export class PeliculasListComponent{
@@ -15,17 +17,11 @@ export class PeliculasListComponent{
     public peliculaElegida:Pelicula;
     public mostrarDatos:boolean;
     public peliculas;
+    public datoServicio;
 
-    constructor(){
+    constructor(private _peliculasService: PeliculasService){
         this.mostrarDatos = false;
-        this.debug();
-        this.peliculas = [
-            new Pelicula(1,"Batman v Superman","Zack Snider",2016),
-            new Pelicula(2,"La verdad deuele","Will Smith",null),
-            new Pelicula(3,"El señor de los anillos","Desconocido",2004),
-            new Pelicula(4,"Una historia real","El de supersalidos",2015),
-            new Pelicula(5,"Don Jhon","Joseph Gordon Levit",null)
-        ];
+        this.peliculas = this._peliculasService.getPeliculas();
         this.peliculaElegida = this.peliculas[0];
         this.pelicula = this.peliculas[0];
     }
